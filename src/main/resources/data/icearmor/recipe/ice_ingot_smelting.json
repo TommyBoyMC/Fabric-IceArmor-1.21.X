@@ -1,0 +1,13 @@
+{
+  "type": "smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "ice_ingot",
+  "ingredient": {
+    "item": "icearmor:ice_clump"
+  },
+  "result": {
+    "id": "icearmor:ice_ingot"
+  }
+}
