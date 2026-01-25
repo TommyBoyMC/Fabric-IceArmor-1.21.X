@@ -1,5 +1,9 @@
 {
   "item.icearmor.ice_clump": "Ice Clump",
   "item.icearmor.ice_ingot": "Ice Ingot",
-  "item.icearmor.ice_nugget": "Ice Nugget"
+  "item.icearmor.ice_nugget": "Ice Nugget",
+
+  "block.icearmor.ice_ore": "Ice Ore",
+  "block.icearmor.deepslate_ice_ore": "Deepslate Ice Ore"
+
 }
