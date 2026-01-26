@@ -13,6 +13,8 @@ public class ModItems {
     public static final Item ICE_INGOT = registerItem("ice_ingot", new Item(new Item.Settings()));
     public static final Item ICE_NUGGET = registerItem("ice_nugget", new Item(new Item.Settings()));
 
+    public static final Item ICE_APPLE = registerItem("ice_apple", new Item(new Item.Settings().food(ModFoodComponent.ICE_APPLE)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(IceArmor.MOD_ID, name), item);
@@ -25,6 +27,10 @@ public class ModItems {
             entries.add(ICE_NUGGET);
             entries.add(ICE_CLUMP);
             entries.add(ICE_INGOT);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(ICE_APPLE);
         });
     }
 }

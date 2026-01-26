@@ -17,11 +17,17 @@ import net.tom.icearmor.IceArmor;
 public class ModBlocks {
     public static final Block ICE_ORE = registerBlock("ice_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create().strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)));
+                    AbstractBlock.Settings.create()
+                            .strength(3f)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.STONE)));
 
     public static final Block DEEPSLATE_ICE_ORE = registerBlock("deepslate_ice_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+                    AbstractBlock.Settings.create()
+                            .strength(4f)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.DEEPSLATE)));
 
 
 
