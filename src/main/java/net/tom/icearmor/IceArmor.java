@@ -2,7 +2,19 @@ package net.tom.icearmor;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.*;
+import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.tom.icearmor.block.ModBlocks;
+import net.tom.icearmor.effect.ModEffects;
+import net.tom.icearmor.item.IceSwordItem;
 import net.tom.icearmor.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,5 +27,18 @@ public class IceArmor implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBLocks();
+		ModEffects.registerEffects();
+
+		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+			IceSwordItem.applyCooldown(player, entity);
+
+			return ActionResult.PASS;
+		});
+
+		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+			IceSwordItem.applyFreezingEffect(player, entity);
+
+			return ActionResult.PASS;
+		});
 	}
 }

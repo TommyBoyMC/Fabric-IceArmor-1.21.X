@@ -9,6 +9,8 @@ import net.tom.icearmor.IceArmor;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_ICE_TOOL = createTag("needs_ice_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ICE_TOOL = createTag("incorrect_for_ice_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(IceArmor.MOD_ID, name));
@@ -16,7 +18,7 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> ICE_ITEMS = createTag("ice_items");
+
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(IceArmor.MOD_ID, name));

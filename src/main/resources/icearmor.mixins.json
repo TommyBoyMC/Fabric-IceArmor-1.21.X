@@ -3,6 +3,8 @@
 	"package": "net.tom.icearmor.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"MouseMixin",
+		"OverlayFreezing",
 		"ExampleMixin"
 	],
 	"injectors": {

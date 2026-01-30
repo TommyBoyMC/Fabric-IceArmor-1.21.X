@@ -38,5 +38,73 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_SWORD)
+                .pattern(" D ")
+                .pattern(" D ")
+                .pattern(" R ")
+                .input('R', Items.STICK)
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_AXE)
+                .pattern("DD ")
+                .pattern("DR ")
+                .pattern(" R ")
+                .input('R', Items.STICK)
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ICE_PICKAXE)
+                .pattern("DDD")
+                .pattern(" R ")
+                .pattern(" R ")
+                .input('R', Items.STICK)
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ICE_SHOVEL)
+                .pattern(" D ")
+                .pattern(" R ")
+                .pattern(" R ")
+                .input('R', Items.STICK)
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_HELMET)
+                .pattern("DDD")
+                .pattern("D D")
+                .pattern("   ")
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_CHESTPLATE)
+                .pattern("D D")
+                .pattern("DDD")
+                .pattern("DDD")
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_LEGGINGS)
+                .pattern("DDD")
+                .pattern("D D")
+                .pattern("D D")
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ICE_BOOTS)
+                .pattern("   ")
+                .pattern("D D")
+                .pattern("D D")
+                .input('D', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
     }
 }

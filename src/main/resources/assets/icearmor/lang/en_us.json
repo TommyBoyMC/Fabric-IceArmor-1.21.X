@@ -6,6 +6,18 @@
   "item.icearmor.ice_apple": "Ice Apple",
 
   "block.icearmor.ice_ore": "Ice Ore",
-  "block.icearmor.deepslate_ice_ore": "Deepslate Ice Ore"
+  "block.icearmor.deepslate_ice_ore": "Deepslate Ice Ore",
+
+  "item.icearmor.ice_sword": "Ice Sword",
+  "item.icearmor.ice_pickaxe": "Ice Pickaxe",
+  "item.icearmor.ice_axe": "Ice Axe",
+  "item.icearmor.ice_shovel": "Ice Shovel",
+
+  "item.icearmor.ice_helmet": "Ice Helmet",
+  "item.icearmor.ice_chestplate": "Ice Chestplate",
+  "item.icearmor.ice_leggings": "Ice Leggings",
+  "item.icearmor.ice_boots": "Ice Boots",
+
+  "effect.icearmor.freezing": "Freezing"
 
 }
