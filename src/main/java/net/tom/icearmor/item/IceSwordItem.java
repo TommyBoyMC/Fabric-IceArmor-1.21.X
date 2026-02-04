@@ -1,18 +1,24 @@
 package net.tom.icearmor.item;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.tom.icearmor.IceArmor;
 import net.tom.icearmor.effect.ModEffects;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -82,7 +88,7 @@ public class IceSwordItem extends SwordItem {
         if (hitCount >= 10) {
             if (player.getMainHandStack().getItem() == ModItems.ICE_SWORD) {
                 if (entity instanceof PlayerEntity hitEntity) {
-                    hitEntity.addStatusEffect(new StatusEffectInstance(ModEffects.FREEZING, 100));
+                    hitEntity.addStatusEffect(new StatusEffectInstance(ModEffects.FREEZING, 60));
                     hitEntity.sendMessage(Text.literal("❄ You are Frozen ❄")
                             .styled(style -> style.withColor(0x9EC0FE)), true);
                 } else if (entity instanceof ZombieEntity hitEntity) {

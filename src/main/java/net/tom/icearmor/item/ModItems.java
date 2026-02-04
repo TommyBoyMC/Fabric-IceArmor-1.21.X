@@ -1,12 +1,17 @@
 package net.tom.icearmor.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.*;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.tom.icearmor.IceArmor;
 import net.tom.icearmor.item.custom.ModArmorItem;
+
+import java.util.List;
 
 public class ModItems {
     public static final Item ICE_CLUMP = registerItem("ice_clump", new Item(new Item.Settings()));
@@ -14,10 +19,28 @@ public class ModItems {
     public static final Item ICE_NUGGET = registerItem("ice_nugget", new Item(new Item.Settings()));
 
     public static final Item ICE_APPLE = registerItem("ice_apple", new Item(new Item.Settings().food(ModFoodComponent.ICE_APPLE)));
+    public static final Item ICE_CARROT = registerItem("ice_carrot", new Item(new Item.Settings().food(ModFoodComponent.ICE_CARROT)));
 
     public static final Item ICE_SWORD = registerItem("ice_sword",
             new SwordItem(ModToolMaterials.ICE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ICE, 4, -2.4f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ICE, 4, -2.4f))) {
+                @Override
+                public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+                    if(Screen.hasShiftDown()) {
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.1"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.2"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.3"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.4"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.5"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.6"));
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword.shift_down.7"));
+                    } else {
+                        tooltip.add(Text.translatable("tooltip.icearmor.icesword"));
+                    }
+
+                    super.appendTooltip(stack, context, tooltip, type);
+                }
+            });
     public static final Item ICE_AXE = registerItem("ice_axe",
             new AxeItem(ModToolMaterials.ICE, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ICE, 6, -3.2f))));
@@ -58,6 +81,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ICE_APPLE);
+            entries.add(ICE_CARROT);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {

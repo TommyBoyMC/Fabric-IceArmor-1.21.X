@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.tom.icearmor.IceArmor;
+import net.tom.icearmor.block.custom.FridgeBlock;
 
 public class ModBlocks {
     public static final Block ICE_ORE = registerBlock("ice_ore",
@@ -29,6 +30,8 @@ public class ModBlocks {
                             .requiresTool()
                             .sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block FRIDGE = registerBlock("fridge",
+            new FridgeBlock(AbstractBlock.Settings.create().nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -47,6 +50,10 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModBlocks.ICE_ORE);
             entries.add(ModBlocks.DEEPSLATE_ICE_ORE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.FRIDGE);
         });
     }
 }

@@ -4,9 +4,12 @@
   "item.icearmor.ice_nugget": "Ice Nugget",
 
   "item.icearmor.ice_apple": "Ice Apple",
+  "item.icearmor.ice_carrot": "Ice Carrot",
 
   "block.icearmor.ice_ore": "Ice Ore",
   "block.icearmor.deepslate_ice_ore": "Deepslate Ice Ore",
+
+  "block.icearmor.fridge": "Fridge",
 
   "item.icearmor.ice_sword": "Ice Sword",
   "item.icearmor.ice_pickaxe": "Ice Pickaxe",
@@ -18,6 +21,16 @@
   "item.icearmor.ice_leggings": "Ice Leggings",
   "item.icearmor.ice_boots": "Ice Boots",
 
-  "effect.icearmor.freezing": "Freezing"
+  "effect.icearmor.freezing": "Freezing",
+
+  "tooltip.icearmor.icesword.shift_down.1": "§bAbility:",
+  "tooltip.icearmor.icesword.shift_down.2": "You can freeze your opponent for 3 sec",
+  "tooltip.icearmor.icesword.shift_down.3": "with right-clicking",
+  "tooltip.icearmor.icesword.shift_down.4": "",
+  "tooltip.icearmor.icesword.shift_down.5": "§bCooldown:",
+  "tooltip.icearmor.icesword.shift_down.6": "You need to crit 10 players/hostile mobs",
+  "tooltip.icearmor.icesword.shift_down.7": "to recharge",
+
+  "tooltip.icearmor.icesword": "Press §bShift§r for more Information!"
 
 }

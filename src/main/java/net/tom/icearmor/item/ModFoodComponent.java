@@ -11,4 +11,6 @@ public class ModFoodComponent {
             .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 250, 2), 0.4f)
             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 2400), 0.1f)
             .alwaysEdible().build();
+
+    public static final FoodComponent ICE_CARROT = new FoodComponent.Builder().nutrition(6).saturationModifier(2.0f).build();
 }

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "icearmor:block/fridge", "y": 180 },
+    "facing=east":  { "model": "icearmor:block/fridge", "y": 270 },
+    "facing=south": { "model": "icearmor:block/fridge", "y": 0 },
+    "facing=west":  { "model": "icearmor:block/fridge", "y": 90 }
+  }
+}

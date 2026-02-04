@@ -32,6 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ICE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.ICE_APPLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ICE_CARROT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ICE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ICE_PICKAXE, Models.HANDHELD);

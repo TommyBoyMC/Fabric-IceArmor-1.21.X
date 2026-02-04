@@ -19,9 +19,7 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
                     .put(ModArmorMaterial.ICE_INGOT_ARMOR_MATERIAL,
-                            List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 400, 1, false, false),
-                                    new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false),
-                                    new StatusEffectInstance(StatusEffects.SPEED, 400, 0, false, false))).build();
+                            List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false))).build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
