@@ -12,6 +12,8 @@ import net.tom.icearmor.IceArmor;
 public class FridgeScreen extends HandledScreen<FridgeScreenHandler> {
     public static final Identifier GUI_TEXTURE =
             Identifier.of(IceArmor.MOD_ID, "textures/gui/fridge/fridge_gui.png");
+    public static final Identifier ARROW_TEXTURE =
+            Identifier.of(IceArmor.MOD_ID, "textures/gui/arrow_progress.png");
 
     public FridgeScreen(FridgeScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
@@ -27,5 +29,20 @@ public class FridgeScreen extends HandledScreen<FridgeScreenHandler> {
         int y = (height - backgroundHeight) / 2;
 
         context.drawTexture(GUI_TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        renderProgressArrow(context, x, y);
+    }
+
+    private void renderProgressArrow(DrawContext context, int x, int y) {
+        if(handler.isCrafting()) {
+            context.drawTexture(ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+                    handler.getScaledArrowProgress(), 16, 24, 16);
+        }
+    }
+
+    @Override
+    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        super.render(context, mouseX, mouseY, delta);
+        drawMouseoverTooltip(context, mouseX, mouseY);
     }
 }

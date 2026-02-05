@@ -10,6 +10,7 @@ import net.tom.icearmor.block.entity.ModBlockEntities;
 import net.tom.icearmor.effect.ModEffects;
 import net.tom.icearmor.item.IceSwordItem;
 import net.tom.icearmor.item.ModItems;
+import net.tom.icearmor.recipe.ModRecipes;
 import net.tom.icearmor.screen.ModScreenHandlers;
 import net.tom.icearmor.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -29,6 +30,8 @@ public class IceArmor implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+
+		ModRecipes.registerRecipes();
 
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			IceSwordItem.applyCooldown(player, entity);

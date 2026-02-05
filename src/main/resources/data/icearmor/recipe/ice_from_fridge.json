@@ -1,0 +1,9 @@
+{
+  "type": "icearmor:fridge",
+  "ingredient": {
+    "item": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "minecraft:ice"
+  }
+}

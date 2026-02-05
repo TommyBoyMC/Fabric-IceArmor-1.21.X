@@ -3,6 +3,8 @@ package net.tom.icearmor.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -16,6 +18,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.tom.icearmor.block.entity.ModBlockEntities;
 import net.tom.icearmor.block.entity.custom.FridgeBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -153,7 +156,18 @@ public class FridgeBlock extends BlockWithEntity implements BlockEntityProvider 
             }
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return ItemActionResult.SUCCESS;
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if(world.isClient()) {
+            return null;
+        }
+
+        return validateTicker(type, ModBlockEntities.FRIDGE_BE,
+                (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }
 

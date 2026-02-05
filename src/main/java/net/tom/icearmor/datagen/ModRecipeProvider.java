@@ -22,10 +22,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        List<ItemConvertible> ICE_INGOT_SMELTABLES = List.of(ModItems.ICE_CLUMP, ModBlocks.ICE_ORE, ModBlocks.DEEPSLATE_ICE_ORE);
+        List<ItemConvertible> WATER_BOTTLE_SMELTABLES = List.of(ModItems.ICE_CLUMP, ModBlocks.ICE_ORE, ModBlocks.DEEPSLATE_ICE_ORE);
 
-        offerSmelting(exporter, ICE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.ICE_INGOT, 0.25f, 200, "ice_ingot");
-        offerBlasting(exporter, ICE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.ICE_INGOT, 0.25f, 100, "ice_ingot");
+        offerSmelting(exporter, WATER_BOTTLE_SMELTABLES, RecipeCategory.MISC, Items.WATER_BUCKET, 0.25f, 200, "ice_ingot");
+        offerBlasting(exporter, WATER_BOTTLE_SMELTABLES, RecipeCategory.MISC, Items.WATER_BUCKET, 0.25f, 100, "ice_ingot");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.ICE_NUGGET, RecipeCategory.MISC, ModItems.ICE_INGOT);
 
