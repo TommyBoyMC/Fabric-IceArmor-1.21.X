@@ -31,6 +31,8 @@
   "tooltip.icearmor.icesword.shift_down.6": "You need to crit 10 players/hostile mobs",
   "tooltip.icearmor.icesword.shift_down.7": "to recharge",
 
-  "tooltip.icearmor.icesword": "Press §bShift§r for more Information!"
+  "tooltip.icearmor.icesword": "Press §bShift§r for more Information!",
+
+  "entity.minecraft.villager.icearmor.icekeeper": "Ice Keeper"
 
 }

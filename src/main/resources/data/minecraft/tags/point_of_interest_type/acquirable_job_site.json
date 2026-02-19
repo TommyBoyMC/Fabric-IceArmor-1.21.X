@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "icearmor:icekeeper_poi",
+      "required": false
+    }
+  ]
+}
