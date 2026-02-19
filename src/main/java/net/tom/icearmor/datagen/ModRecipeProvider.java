@@ -106,5 +106,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.FRIDGE)
+                .pattern("ABA")
+                .pattern("ACA")
+                .pattern("ABA")
+                .input('A', Items.QUARTZ)
+                .input('B', Items.REDSTONE)
+                .input('C', Items.PACKED_ICE)
+                .criterion(hasItem(Items.PACKED_ICE), conditionsFromItem(Items.PACKED_ICE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.PACKED_ICE)
+                .pattern("AA ")
+                .pattern("AA ")
+                .pattern("   ")
+                .input('A', ModItems.ICE_INGOT)
+                .criterion(hasItem(ModItems.ICE_INGOT), conditionsFromItem(ModItems.ICE_INGOT))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.ICE)
+                .pattern("AA ")
+                .pattern("AA ")
+                .pattern("   ")
+                .input('A', ModItems.ICE_NUGGET)
+                .criterion(hasItem(ModItems.ICE_NUGGET), conditionsFromItem(ModItems.ICE_NUGGET))
+                .offerTo(exporter);
+
     }
 }

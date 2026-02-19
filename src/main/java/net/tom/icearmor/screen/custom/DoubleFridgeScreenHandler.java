@@ -8,21 +8,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 import net.tom.icearmor.block.entity.custom.FridgeBlockEntity;
 import net.tom.icearmor.screen.ModScreenHandlers;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-public class FridgeScreenHandler extends ScreenHandler {
+public class DoubleFridgeScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
     public final FridgeBlockEntity blockEntity;
 
-    public FridgeScreenHandler(int syncId, PlayerInventory inv, BlockPos pos) {
+    public DoubleFridgeScreenHandler(int syncId, PlayerInventory inv, BlockPos pos) {
         this(syncId,
                 inv,
                 inv.player.getWorld().getBlockEntity(pos),
@@ -31,14 +29,16 @@ public class FridgeScreenHandler extends ScreenHandler {
     }
 
 
-    public FridgeScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
-        super(ModScreenHandlers.FRIDGE_SCREEN_HANDLER, syncId);
+    public DoubleFridgeScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+        super(ModScreenHandlers.DOUBLE_FRIDGE_SCREEN_HANDLER, syncId);
         this.inventory = ((Inventory) blockEntity);
         this.blockEntity = ((FridgeBlockEntity) blockEntity);
         this.propertyDelegate = arrayPropertyDelegate;
 
-        this.addSlot(new Slot(inventory, 0, 54, 34));
-        this.addSlot(new Slot(inventory, 1, 104, 34));
+        this.addSlot(new Slot(inventory, 0, 54, 12));
+        this.addSlot(new Slot(inventory, 1, 104, 12));
+        this.addSlot(new Slot(inventory, 2, 54, 52));
+        this.addSlot(new Slot(inventory, 3, 104, 52));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -52,11 +52,13 @@ public class FridgeScreenHandler extends ScreenHandler {
 
     public int getScaledArrowProgress() {
         int progress = this.propertyDelegate.get(0);
-        int maxProgress = 120; // Max Progress
+        int maxProgress = 100; // Max Progress
         int arrowPixelSize = 24; // This is the width in pixels of the arrow
 
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
+
+
 
     @Override
     public ItemStack quickMove(PlayerEntity player, int invSlot) {
