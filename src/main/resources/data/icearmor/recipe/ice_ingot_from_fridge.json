@@ -1,0 +1,9 @@
+{
+  "type": "icearmor:fridge",
+  "ingredient": {
+    "item": "icearmor:ice_clump"
+  },
+  "result": {
+    "id": "icearmor:ice_ingot"
+  }
+}

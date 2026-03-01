@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "icearmor:ice_ingot"
+  },
+  "base": {
+    "item": "minecraft:mace"
+  },
+  "result": {
+    "count": 1,
+    "id": "icearmor:ice_mace"
+  },
+  "template": {
+    "item": "icearmor:ice_upgrade_template"
+  }
+}

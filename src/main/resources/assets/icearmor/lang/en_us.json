@@ -1,0 +1,49 @@
+{
+  "item.icearmor.ice_clump": "Ice Clump",
+  "item.icearmor.ice_ingot": "Ice Ingot",
+  "item.icearmor.ice_nugget": "Ice Nugget",
+
+  "item.icearmor.ice_apple": "Ice Apple",
+  "item.icearmor.ice_carrot": "Ice Carrot",
+
+  "block.icearmor.ice_ore": "Ice Ore",
+  "block.icearmor.deepslate_ice_ore": "Deepslate Ice Ore",
+
+  "block.icearmor.fridge": "Fridge",
+
+  "item.icearmor.ice_sword": "Ice Sword",
+  "item.icearmor.ice_pickaxe": "Ice Pickaxe",
+  "item.icearmor.ice_axe": "Ice Axe",
+  "item.icearmor.ice_shovel": "Ice Shovel",
+
+  "item.icearmor.ice_totem": "Ice Totem Of Undying",
+  "item.icearmor.ice_mace": "Ice Mace",
+  "item.icearmor.ice_upgrade_template": "Smithing Template",
+
+  "tooltip.icearmor.ice_template.1": "§7Ice Upgrade",
+  "tooltip.icearmor.ice_template.2": "",
+  "tooltip.icearmor.ice_template.3": "§7Applies to:",
+  "tooltip.icearmor.ice_template.4": "§9 Mace and Totem",
+  "tooltip.icearmor.ice_template.5": "§7Ingredients:",
+  "tooltip.icearmor.ice_template.6": "§9 Ice Ingot",
+
+  "item.icearmor.ice_helmet": "Ice Helmet",
+  "item.icearmor.ice_chestplate": "Ice Chestplate",
+  "item.icearmor.ice_leggings": "Ice Leggings",
+  "item.icearmor.ice_boots": "Ice Boots",
+
+  "effect.icearmor.freezing": "Freezing",
+
+  "tooltip.icearmor.icesword.shift_down.1": "§bAbility:",
+  "tooltip.icearmor.icesword.shift_down.2": "You can freeze your opponent for 3 sec",
+  "tooltip.icearmor.icesword.shift_down.3": "with right-clicking",
+  "tooltip.icearmor.icesword.shift_down.4": "",
+  "tooltip.icearmor.icesword.shift_down.5": "§bCooldown:",
+  "tooltip.icearmor.icesword.shift_down.6": "You need to crit 10 players/hostile mobs",
+  "tooltip.icearmor.icesword.shift_down.7": "to recharge",
+
+  "tooltip.icearmor.icesword": "Press §bShift§r for more Information!",
+
+  "entity.minecraft.villager.icekeeper": "Ice Keeper"
+
+}

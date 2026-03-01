@@ -1,0 +1,9 @@
+{
+  "type": "icearmor:fridge",
+  "ingredient": {
+    "item": "minecraft:carrot"
+  },
+  "result": {
+    "id": "icearmor:ice_carrot"
+  }
+}

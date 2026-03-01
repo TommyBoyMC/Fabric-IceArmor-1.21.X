@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "icearmor",
+	"version": "${version}",
+	"name": "Ice Armor",
+	"description": "This is a mod that adds Ice Armor!",
+	"authors": [
+		"Tom!"
+	],
+	"contact": {
+		"homepage": "https://tom.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/icearmor/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.tom.icearmor.IceArmor"
+		],
+		"fabric-datagen": [
+			"net.tom.icearmor.IceArmorDataGenerator"
+		],
+		"client": [
+			"net.tom.icearmor.IceArmorClient"
+		]
+	},
+	"mixins": [
+      "icearmor.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

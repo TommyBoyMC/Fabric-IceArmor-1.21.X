@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "icearmor:block/deepslate_ice_ore"
+  }
+}

@@ -1,0 +1,4 @@
+// 1.21	2026-02-26T21:55:05.3626503	Ice Armor/Tags for minecraft:block
+d95e1e08c2ebcbb4e30f16110e55409d940c3b9c data\minecraft\tags\block\mineable\pickaxe.json
+ae03708be15544b99274e9b0c7f6689e42698d25 data\minecraft\tags\block\needs_iron_tool.json
+3541d482d2b250c122a1e89adbcf283ff727f5e4 data\minecraft\tags\block\needs_stone_tool.json

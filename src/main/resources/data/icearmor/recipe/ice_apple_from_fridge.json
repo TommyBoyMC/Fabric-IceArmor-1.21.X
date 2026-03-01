@@ -1,0 +1,9 @@
+{
+  "type": "icearmor:fridge",
+  "ingredient": {
+    "item": "minecraft:golden_apple"
+  },
+  "result": {
+    "id": "icearmor:ice_apple"
+  }
+}

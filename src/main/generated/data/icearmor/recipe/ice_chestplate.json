@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "icearmor:ice_ingot"
+    }
+  },
+  "pattern": [
+    "D D",
+    "DDD",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "icearmor:ice_chestplate"
+  }
+}

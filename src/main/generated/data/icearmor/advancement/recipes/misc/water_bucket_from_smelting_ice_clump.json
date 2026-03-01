@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice_clump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "icearmor:ice_clump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:water_bucket_from_smelting_ice_clump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ice_clump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:water_bucket_from_smelting_ice_clump"
+    ]
+  }
+}

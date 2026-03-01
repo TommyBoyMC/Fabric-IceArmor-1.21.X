@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "part=single,facing=north": { "model": "icearmor:block/fridge", "y": 180 },
+    "part=single,facing=south": { "model": "icearmor:block/fridge", "y": 0 },
+    "part=single,facing=west":  { "model": "icearmor:block/fridge", "y": 90 },
+    "part=single,facing=east":  { "model": "icearmor:block/fridge", "y": 270 },
+
+    "part=top,facing=north": { "model": "icearmor:block/fridge_top", "y": 180 },
+    "part=top,facing=south": { "model": "icearmor:block/fridge_top", "y": 0 },
+    "part=top,facing=west":  { "model": "icearmor:block/fridge_top", "y": 90 },
+    "part=top,facing=east":  { "model": "icearmor:block/fridge_top", "y": 270 },
+
+    "part=bottom,facing=north": { "model": "icearmor:block/fridge_bottom", "y": 180 },
+    "part=bottom,facing=south": { "model": "icearmor:block/fridge_bottom", "y": 0 },
+    "part=bottom,facing=west":  { "model": "icearmor:block/fridge_bottom", "y": 90 },
+    "part=bottom,facing=east":  { "model": "icearmor:block/fridge_bottom", "y": 270 }
+  }
+}

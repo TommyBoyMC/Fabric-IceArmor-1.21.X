@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:apple"
+    },
+    "R": {
+      "item": "icearmor:ice_ingot"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "R#R",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "icearmor:ice_apple"
+  }
+}

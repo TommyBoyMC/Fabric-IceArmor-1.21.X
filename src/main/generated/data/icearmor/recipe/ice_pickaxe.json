@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "icearmor:ice_ingot"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "DDD",
+    " R ",
+    " R "
+  ],
+  "result": {
+    "count": 1,
+    "id": "icearmor:ice_pickaxe"
+  }
+}
